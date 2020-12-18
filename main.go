@@ -35,7 +35,7 @@ func isInt(s string) bool {
     return err == nil // err == nil means there is no error, so True means is valid Integer
 }
 
-func main() {
+func runGame() {
   var limit int = 100
 
   // use always a new Seed
@@ -87,5 +87,8 @@ func main() {
     }
 
   } // for
+}
 
+func main() {
+  runGame()
 }
