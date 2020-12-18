@@ -35,12 +35,11 @@ func isInt(s string) bool {
 }
 
 func main() {
-	// create a background context (i.e. one that never cancels)
-	//ctx := context.Background()
+  var limit int = 100
 
   // use always a new Seed
   rand.Seed( time.Now().UnixNano() )
-  my_secret_number := rand.Intn(100)
+  var my_secret_number int = rand.Intn( limit )
 
   reader := bufio.NewReader(os.Stdin)
 
@@ -56,12 +55,20 @@ func main() {
 
     foo := isInt(text)
     if foo == true {
-      fmt.Println("yep Zahl ", text)
-    }
+      guess, _ := strconv.Atoi(text)
 
-    if _, err := strconv.Atoi(text); err == nil {
-      fmt.Println("yep Zahl ", text)
-
+      if guess < my_secret_number {
+          fmt.Println("above!")
+      } else if guess > my_secret_number {
+          fmt.Println("below!")
+      } else if guess == my_secret_number {
+          fmt.Println("================")
+          fmt.Println("=== success! ===")
+          fmt.Println("================")
+          os.Exit(0)
+      }
+    } else {
+      // This is a text/string
       switch text  {
         case "foobar":
           fmt.Println("foobar yes")
