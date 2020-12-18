@@ -26,6 +26,7 @@ func gameRules() {
   fmt.Println("")
   fmt.Println("Control Commands: ")
   fmt.Println("  exit")
+  fmt.Println("  help")
 
 }
 
@@ -47,7 +48,7 @@ func main() {
 
   // endless loop
   for {
-    fmt.Println("guess a number between 0 and 100")
+    fmt.Println("guess a number between 0 and ", limit)
     fmt.Print("-> ")
     text, _ := reader.ReadString('\n')
     // convert CRLF to LF
@@ -74,10 +75,14 @@ func main() {
           fmt.Println("foobar yes")
         case "barfoo":
           fmt.Println("yes barfoo!")
-        case "debug":
-          fmt.Println("secret", my_secret_number)
+        //case "debug":
+        //  fmt.Println("secret", my_secret_number)
         case "exit":
           os.Exit(0)
+        case "help":
+          gameRules()
+        default:
+         fmt.Println("something completly different...")
       }
     }
 
