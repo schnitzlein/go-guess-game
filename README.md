@@ -7,7 +7,7 @@ If the number is lower than your guess, you'll receive a 'below'.
 
 This simply little test application.
 
-![alt text](https://github.com/schnitzlein/go-guess-game/blob/img/game.png
+![alt text](https://github.com/schnitzlein/go-guess-game/blob/main/img/game.png
 
 
 ## Installation Instructions
