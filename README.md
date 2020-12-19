@@ -7,8 +7,22 @@ If the number is lower than your guess, you'll receive a 'below'.
 
 This simply little test application.
 
+![alt text](https://github.com/schnitzlein/go-guess-game/blob/img/game.png
 
-Schooling Purpose
+
+## Installation Instructions
+First install the go-lang compiler, please see here: https://golang.org/doc/install
+Than check with 'go version'
+Next is 'git clone <this-repo>'
+
+Compile it locally.
+'go build -o guess'
+
+## Run the Game
+'./guess'
+
+
+## Schooling Purpose
 If you need a simple school task to teach someone how to code
 so just look below the task.
 
